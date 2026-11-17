@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #223055;
+  }
+  
+  body {
+    background-color: #0B1020;
+    color: #F8FAFC;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B1020;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #223055;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7357FF;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(21, 30, 56, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg, rgba(26, 37, 68, 0.7) 0%, rgba(15, 22, 43, 0.6) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(115, 87, 255, 0.35);
+    box-shadow: 0 10px 30px -10px rgba(115, 87, 255, 0.2);
+  }
+
+  .glass-input {
+    background: rgba(15, 22, 43, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    transition: all 0.2s ease;
+  }
+  
+  .glass-input:focus {
+    border-color: #7357FF;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(115, 87, 255, 0.25);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #FFFFFF 20%, #7357FF 70%, #00D9FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-purple-cyan {
+    background: linear-gradient(135deg, #7357FF 0%, #00D9FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #00D9FF 0%, #7357FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-radial-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(115, 87, 255, 0.15) 0%, rgba(0, 217, 255, 0.05) 40%, transparent 70%);
+  }
+}
